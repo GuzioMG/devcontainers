@@ -14,12 +14,12 @@ Running `hello` inside the built container will print the greeting provided to i
 
 ```jsonc
 {
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "features": {
-        "ghcr.io/devcontainers/feature-starter/hello:1": {
-            "greeting": "Hello"
-        }
-    }
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/feature-starter/hello:1": {
+			"greeting": "Hello"
+		}
+	}
 }
 ```
 
@@ -35,12 +35,12 @@ Running `color` inside the built container will print your favorite color to sta
 
 ```jsonc
 {
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "features": {
-        "ghcr.io/devcontainers/feature-starter/color:1": {
-            "favorite": "green"
-        }
-    }
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/feature-starter/color:1": {
+			"favorite": "green"
+		}
+	}
 }
 ```
 
@@ -78,19 +78,19 @@ For example, the `color` feature provides an enum of three possible options (`re
 
 ```jsonc
 {
-    // ...
-    "options": {
-        "favorite": {
-            "type": "string",
-            "enum": [
-                "red",
-                "gold",
-                "green"
-            ],
-            "default": "red",
-            "description": "Choose your favorite color."
-        }
-    }
+	// ...
+	"options": {
+		"favorite": {
+			"type": "string",
+			"enum": [
+				"red",
+				"gold",
+				"green"
+			],
+			"default": "red",
+			"description": "Choose your favorite color."
+		}
+	}
 }
 ```
 
@@ -166,23 +166,23 @@ An example `devcontainer.json` can be found below.
 
 ```jsonc
 {
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "features": {
-     "ghcr.io/my-org/private-features/hello:1": {
-            "greeting": "Hello"
-        }
-    },
-    "customizations": {
-        "codespaces": {
-            "repositories": {
-                "my-org/private-features": {
-                    "permissions": {
-                        "packages": "read",
-                        "contents": "read"
-                    }
-                }
-            }
-        }
-    }
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+	 "ghcr.io/my-org/private-features/hello:1": {
+			"greeting": "Hello"
+		}
+	},
+	"customizations": {
+		"codespaces": {
+			"repositories": {
+				"my-org/private-features": {
+					"permissions": {
+						"packages": "read",
+						"contents": "read"
+					}
+				}
+			}
+		}
+	}
 }
 ```

@@ -7,9 +7,9 @@ A feature to remind you of your favorite color
 
 ```json
 "features": {
-    "ghcr.io/devcontainers/feature-starter/color:1": {
-        "version": "latest"
-    }
+	"ghcr.io/devcontainers/feature-starter/color:1": {
+		"version": "latest"
+	}
 }
 ```
 

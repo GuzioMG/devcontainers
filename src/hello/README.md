@@ -7,9 +7,9 @@ A hello world feature
 
 ```json
 "features": {
-    "ghcr.io/devcontainers/feature-starter/hello:1": {
-        "version": "latest"
-    }
+	"ghcr.io/devcontainers/feature-starter/hello:1": {
+		"version": "latest"
+	}
 }
 ```
 
