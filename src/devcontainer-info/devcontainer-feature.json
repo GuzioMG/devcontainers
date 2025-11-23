@@ -1,0 +1,9 @@
+{
+	"name": "devcontainer-info",
+	"id": "devcontainer-info",
+	"version": "1.0.0",
+	"description": "A feature that lets you inspect the contents of several internal env-vars during container creation, by printing them to STDOUT (and saving those print results as an executable echo-filled script /usr/local/bin/devcontainer-info for convenience).",
+	"installsAfter": [
+		"ghcr.io/devcontainers/features/common-utils"
+	]
+}

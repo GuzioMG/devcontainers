@@ -1,0 +1,24 @@
+{
+	"name": "VSCode Essentials",
+	"id": "extensions-essentials",
+	"version": "1.0.0",
+	"description": "A feature that installs extensions for the most common common/scripting languages (ones that you could realistically find in any project, regardless of its \"main\" language/framework, ie. JSON (VSCode already supports JSON, but the included QuickType extension lets you automatically generate type definitions from JSON in nearly any language), YAML, XML, KDL, TOML, Python (only the extension, tho - if you actually want to use the Python language for „simple scripting” tasks (that's the reason why Python got included here, btw - not for the purpose of being your project's core language, as this Container Feature is supposed to be language-agnostic) instead of Bash Scripts or POSIX-compliant Shell Scripts - or you just want to use python3 -m http.server (which is also a pretty common, language-agnostic use-case) - you'll need to install Python with your container's package manager) and Bash/POSIX.sh) into a VSCode-based devcontainer environment.",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"quicktype.quicktype",
+
+				"redhat.vscode-yaml",
+				"redhat.vscode-xml",
+				"kdl-org.kdl",
+				"tamasfe.even-better-toml",
+
+				"ms-python.python",
+				"timonwong.shellcheck"
+			]
+		}
+	},
+	"installsAfter": [
+		"ghcr.io/devcontainers/features/common-utils"
+	]
+}

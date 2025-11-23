@@ -1,0 +1,16 @@
+{
+	"name": "VSCode Spellchecking",
+	"id": "extension-spellcheck",
+	"version": "1.0.0",
+	"description": "A feature that installs the spellchecker extension into a VSCode-based devcontainer environment.",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"streetsidesoftware.code-spell-checker"
+			]
+		}
+	},
+	"installsAfter": [
+		"ghcr.io/devcontainers/features/common-utils"
+	]
+}

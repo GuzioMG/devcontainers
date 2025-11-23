@@ -1,0 +1,17 @@
+{
+	"name": "Personal Devcontainer Essentials",
+	"id": "personal",
+	"version": "1.0.0",
+	"description": "A feature that wraps around several other (more-or-less generic) features made by this feature's author, that (despite the general-purpose nature of its underlying features) amount to a pretty oddly-specific package, and as such this feature is intended to be mostly used just by its author. It still IS mostly generic, so (in theory) anyone else could use it, although you'd have to content with a bit of opinionation (mainly: assumptions about APT and VSCode presence (this feature's author assumed that she's only gonna use Debian/Ubuntu-based containers, and she uses VSCode - so some things (especially a metric fuck-ton of VSCode extensions that this feature pulls) don't work if those dependencies aren't met) and the preference to use GitHub stuff and FISh) and pulls 3 extensions that you might not need (one is a theme; the other two won'be necessary unless you speak Polish at least - as one is a Polish spellchecker (don't worry - English is also installed) and the other is a set Polish translations for VSCode). But if you can put up with that (or if you just-so-happen to be a VSCode+FISh+midnight_blue enjoyer and a sane (defined as someone who used APT-based containers for stuff you interact with (due to it being the industry standard), regardless of their preferences for their main OS (I use Arch, btw) and infrequently-interacted containers) GitHub user from Poland, like me), then - by all means - feel free to use this! Glad I could help.",
+	"dependsOn": {
+		"ghcr.io/guziomg/devcontainers/extensions-essentials-ultimate:latest": {},
+		"ghcr.io/guziomg/devcontainers/polskie-rozszerzenia:latest": {},
+		"ghcr.io/guziomg/devcontainers/fish-apt-extended:latest": {
+			"starship": "yes",
+			"greeting": "fastfetch"
+		}
+	},
+	"installsAfter": [
+		"ghcr.io/devcontainers/features/common-utils"
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"name": "Go CLI Development",
+	"id": "go-cli-dev",
+	"version": "1.0.0",
+	"description": "A feature that wraps around several other features (Go itself, Cobra (via the go-packages-install feature), and supporting tool-features), often used together for Go CLI Development.",
+	"dependsOn": {
+		"ghcr.io/devcontainers/features/go:1": {},
+		"ghcr.io/guiyomh/features/gomarkdoc:latest": {},
+		"ghcr.io/guiyomh/features/goreleaser:latest": {},
+		"ghcr.io/guiyomh/features/gotestsum:latest": {},
+		"ghcr.io/azutake/devcontainer-features/go-packages-install:latest": {
+			"PACKAGES": "github.com/spf13/cobra-cli@latest"
+		}
+	},
+	"installsAfter": [
+		"ghcr.io/devcontainers/features/common-utils"
+	]
+}

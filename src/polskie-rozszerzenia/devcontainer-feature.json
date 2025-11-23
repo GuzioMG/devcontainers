@@ -1,0 +1,23 @@
+{
+	"name": "Wsparcie dla języka polskiego w VSCode",
+	"id": "polskie-rozszerzenia",
+	"version": "1.0.0",
+	"description": "A feature that installs Polish-related extensions into a VSCode-based devcontainer environment.",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"cSpell.language": "en,pl"
+			},
+			"extensions": [
+				"streetsidesoftware.code-spell-checker-polish",
+				"ms-ceintl.vscode-language-pack-pl"
+			]
+		}
+	},
+	"dependsOn": {
+		"ghcr.io/guziomg/devcontainers/extension-spellcheck:latest": {}
+	},
+	"installsAfter": [
+		"ghcr.io/devcontainers/features/common-utils"
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"name": "FISh-APT Extended",
+	"id": "fish-apt-extended",
+	"version": "1.0.0",
+	"description": "A feature that wraps around fish-apt-get and fish-persistent-data features, and also sets FISh as the default shell in a VSCode-based devcontainer environment and installs some other extras for FISh (Starship and FastFetch).",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "fish"
+			}
+		}
+	},
+	"options": {
+		"greeting": {
+			"type": "string",
+			"proposals": [
+				"fish_default",
+				"simple",
+				"fastfetch",
+				"disabled"
+			],
+			"default": "simple",
+			"description": "Select a special, pre-made FISh Greeting from the list - or enter your own, custom string to be used as a FISh Greeting directly."
+		},
+		"starship": {
+			"type": "string",
+			"proposals": [
+				"yes",
+				"no"
+			],
+			"default": "yes",
+			"description": "Install and enable Starship prompt for FISh?"
+		}
+	},
+	"dependsOn": {
+		"ghcr.io/nikobockerman/devcontainer-features/fish-persistent-data:2": {},
+		"ghcr.io/devcontainers-extra/features/fish-apt-get:1": {}
+	},
+	"installsAfter": [
+		"ghcr.io/devcontainers/features/common-utils"
+	]
+}

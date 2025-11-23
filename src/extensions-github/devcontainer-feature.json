@@ -1,0 +1,17 @@
+{
+	"name": "GitHub Extensions",
+	"id": "extensions-github",
+	"version": "1.0.0",
+	"description": "A feature that installs GitHub Extensions into a VSCode-based devcontainer environment.",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"github.vscode-pull-request-github",
+				"github.vscode-github-actions"
+			]
+		}
+	},
+	"installsAfter": [
+		"ghcr.io/devcontainers/features/common-utils"
+	]
+}

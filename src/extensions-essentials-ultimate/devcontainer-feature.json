@@ -1,0 +1,14 @@
+{
+	"name": "Ultimate Essentials",
+	"id": "extensions-essentials-ultimate",
+	"version": "1.0.0",
+	"description": "A feature that wraps around extensions-github, extensions-essentials and extension-spellcheck features, for the ULTIMATE experience in a VSCode-based devcontainer environment.",
+	"dependsOn": {
+		"ghcr.io/guziomg/devcontainers/extensions-github:latest": {},
+		"ghcr.io/guziomg/devcontainers/extensions-essentials:latest": {},
+		"ghcr.io/guziomg/devcontainers/extension-spellcheck:latest": {}
+	},
+	"installsAfter": [
+		"ghcr.io/devcontainers/features/common-utils"
+	]
+}
