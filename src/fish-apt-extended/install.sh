@@ -9,9 +9,7 @@ UPDATE_DATE="$(cat ./update_date.txt)"
 
 if [ "$STARSHIP" = "yes" ] || [ "$STARSHIP" = "true" ]; then
 	echo "Installing Starship prompt for FISh..."
-	set -o pipefail
 	set +e; cat ./install_starship-$UPDATE_DATE.sh | sh
-
 	if [ $? -ne 0 ]; then
 		set -e
 		echo "!!!!! ERROR: Starship installation failed - no changes to FISh prompt will be made"
