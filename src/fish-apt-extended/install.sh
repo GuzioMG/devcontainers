@@ -9,14 +9,15 @@ UPDATE_DATE="$(cat ./update_date.txt)"
 
 if [ "$STARSHIP" = "yes" ] || [ "$STARSHIP" = "true" ]; then
 	echo "Installing Starship prompt for FISh..."
-	set +e; cat ./install_starship-$UPDATE_DATE.sh | sh --yes
+	chmod +x "./install_starship-$UPDATE_DATE.sh"
+	set +e; ./install_starship-$UPDATE_DATE.sh --yes
 	if [ $? -ne 0 ]; then
 		set -e
 		echo "!!!!! ERROR: Starship installation failed - no changes to FISh prompt will be made"
 	else
 		set -e
-		echo >> ~/.config/fish/config.fish
-		echo "starship init fish | source" >> ~/.config/fish/config.fish
+		#echo >> ~/.config/fish/config.fish
+		#echo "starship init fish | source" >> ~/.config/fish/config.fish
 		echo "Set Starship as the prompt for FISh successfully!"
 	fi
 fi
@@ -36,14 +37,14 @@ else
 
 	if [ "$GREETING" = "disabled" ]; then
 		echo "...so Greetings shall be disabled!"
-		echo >> ~/.config/fish/config.fish
-		echo "set -g fish_greeting" >> ~/.config/fish/config.fish
+		#echo >> ~/.config/fish/config.fish
+		#echo "set -g fish_greeting" >> ~/.config/fish/config.fish
 	else
 		echo "...which is: $GREETING"
-		echo >> ~/.config/fish/config.fish
-		echo "function fish_greeting" >> ~/.config/fish/config.fish
-		echo "    $GREETING" >> ~/.config/fish/config.fish
-		echo "end" >> ~/.config/fish/config.fish
+		#echo >> ~/.config/fish/config.fish
+		#echo "function fish_greeting" >> ~/.config/fish/config.fish
+		#echo "    $GREETING" >> ~/.config/fish/config.fish
+		#echo "end" >> ~/.config/fish/config.fish
 	fi
 
 	echo "Custom Greeting set successfully!"
