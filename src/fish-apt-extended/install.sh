@@ -58,7 +58,7 @@ if [ "$GREETING" = "fastfetch" ]; then
 	else
 		echo "You don't seem to be using a 64-bit x86-CPU - assuming it's ARM64 instead, for the purpose of FastFetch installation."
 		ARCH="arm"
-	else
+	fi
 	cp -vr -npr ./fastfetch_$ARCH-$UPDATE_DATE/usr/ /
 	echo "FastFetch installed successfully!"
 fi
