@@ -1,0 +1,70 @@
+{
+	"name": "Hyprland",
+	"id": "hyprland",
+	"version": "1.0.0",
+	"description": "A feature that wraps around two other features (Go lang and go-packages-install feature) and uses them to install HyprLS, and also installs the Hyprland extension pack into a VSCode-based devcontainer environment, to have something to use the just-installed HyprLS with. It also adds (some) Hyprland-related words to the spellchecker's dictionary, but don't expect the list to be even close to complete at this stage; it will certainly be expanded.",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"cSpell.words": [
+					"bindel",
+					"bindl",
+					"bindm",
+					"bordersize",
+					"brightnessctl",
+					"drun",
+					"emptym",
+					"emptynm",
+					"fkeys",
+					"gapsin",
+					"gapsout",
+					"hypr",
+					"HYPRCURSOR",
+					"hyprpaper",
+					"hyprpm",
+					"keybinds",
+					"killactive",
+					"konsole",
+					"libexec",
+					"movefocus",
+					"movetoworkspace",
+					"movewindow",
+					"nofocus",
+					"ONOFF",
+					"onworkspace",
+					"pkill",
+					"playerctl",
+					"popin",
+					"pseudotile",
+					"pseudotiling",
+					"resizewindow",
+					"rgba",
+					"screencopy",
+					"slidefadevert",
+					"suppressevent",
+					"togglefloating",
+					"togglespecialworkspace",
+					"togglesplit",
+					"waybar",
+					"windowrule",
+					"wofi",
+					"wpctl",
+					"XCURSOR",
+					"xwayland"
+				]
+			},
+			"extensions": [
+				"ewen-lbh.hyprland"
+			]
+		}
+	},
+	"dependsOn": {
+		"ghcr.io/devcontainers/features/go:1": {},
+		"ghcr.io/azutake/devcontainer-features/go-packages-install:latest": {
+			"PACKAGES": "github.com/hyprland-community/hyprls/cmd/hyprls@latest"
+		}
+	},
+	"installsAfter": [
+		"ghcr.io/devcontainers/features/common-utils"
+	]
+}
