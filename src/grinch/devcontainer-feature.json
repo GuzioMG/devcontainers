@@ -1,0 +1,16 @@
+{
+	"name": "Grinch Installer",
+	"id": "grinch",
+	"version": "1.0.0",
+	"description": "A feature that automatically installs the Grinch utility for MRPacks. For convenience, it also installs the KDL extension for VSCode in a VSCode-based devcontainer environment, as Grinch uses KDL for its config files.",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"kdl-org.kdl"
+			]
+		}
+	},
+	"installsAfter": [
+		"ghcr.io/devcontainers/features/common-utils"
+	]
+}
