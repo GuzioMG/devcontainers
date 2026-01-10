@@ -1,0 +1,16 @@
+{
+	"name": "BunJS",
+	"id": "bun",
+	"version": "1.0.0",
+	"description": "A feature that automatically installs the Bun javascript engine. For convenience, it also installs the ESLint extension in a VSCode-based devcontainer environment.",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint"
+			]
+		}
+	},
+	"installsAfter": [
+		"ghcr.io/devcontainers/features/common-utils"
+	]
+}
