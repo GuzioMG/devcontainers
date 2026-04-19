@@ -33,7 +33,6 @@
 		}
 	},
 	"dependsOn": {
-		"ghcr.io/nikobockerman/devcontainer-features/fish-persistent-data:2": {},
 		"ghcr.io/devcontainers-extra/features/fish-apt-get:1": {}
 	},
 	"installsAfter": [
